@@ -11,19 +11,18 @@ const Hero=()=>{
     const [controls]=useContext(ControlsContext);
     const [tradeups,setTradeups]=useState([]);
     const [isLoading,setIsLoading]=useState(false);
-    const [isLoopRunning,setIsLoopRunning]=useState(false);
     useEffect(()=>{
         socket.on('getCollectionTradeups',msg=>setTradeups((prev)=>{
             return([...prev,msg]);
         }));
-        socket.on('isLoopRunning',msg=>setIsLoopRunning(msg));
     },[]);
     const getTradeups=()=>{
         setTradeups([]);
-        socket.emit('getRunningStatus');
-        if(isLoopRunning)
-            socket.emit('stopLoop');
-        socket.emit('getTradeups',controls);
+        socket.emit('getRunningStatus',response=>{
+            if(response.isRunning)
+                socket.emit('stopLoop');
+            socket.emite('getTradeups',controls);
+        });
         setIsLoading(true);
     }
     return(
