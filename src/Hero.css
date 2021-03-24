@@ -1,0 +1,27 @@
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--dirtywhite);
+  display: flex;
+  flex-direction: column;
+  padding-top: 5em;
+}
+
+#tradeupbtn {
+  font-family: "Raleway", sans-serif;
+  padding: 0.5em;
+  border-radius: 2em;
+  color: var(--darkblue);
+  font-weight: bold;
+  background-color: transparent;
+  border: 2px solid var(--darkblue);
+}
+
+#btnContainer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  margin-bottom: 1em;
+}

@@ -1,0 +1,46 @@
+.NavContainer {
+  transition-property: top, height;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  top: calc(3em - 100vh);
+  background-color: var(--lightblue);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1em;
+  flex: 100;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+input[type="text"] {
+  text-align: center;
+  border-radius: 3em;
+}
+#settings {
+  flex: 1;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 48em) {
+  .NavContainer {
+    top: calc(4em - 100vh);
+  }
+  #settings {
+    font-size: 3em;
+  }
+}

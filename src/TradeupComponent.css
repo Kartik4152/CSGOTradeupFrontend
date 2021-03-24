@@ -1,0 +1,51 @@
+.tradeupContainer {
+  width: 100vw;
+  display: flex;
+  padding: 1em;
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.individualContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 60vw;
+  padding: 1em;
+  border: 2px solid var(--bluegrey);
+  border-radius: 0.5em;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.individualContainer div {
+  text-align: center;
+}
+
+.tradeupTitle {
+  width: 100vw;
+  padding: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 6vw;
+  text-align: center;
+  background-color: var(--bluegrey);
+  color: var(--dirtywhite);
+}
+
+.outcomes img {
+  height: 40px;
+  width: 40px;
+}
+
+.outcomes {
+  display: flex;
+  gap: 0.2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (min-width: 48em) {
+  .tradeupTitle {
+    font-size: 2.5vw;
+  }
+}
