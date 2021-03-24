@@ -21,7 +21,7 @@ const Hero=()=>{
         socket.emit('getRunningStatus',response=>{
             if(response.isRunning)
                 socket.emit('stopLoop');
-            socket.emite('getTradeups',controls);
+            socket.emit('getTradeups',controls);
         });
         setIsLoading(true);
     }
