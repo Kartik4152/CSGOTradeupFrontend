@@ -17,11 +17,17 @@ const Hero=()=>{
         }));
     },[]);
     const getTradeups=()=>{
-        setTradeups([]);
         socket.emit('getRunningStatus',response=>{
+            //if loop is running
             if(response.isRunning)
-                socket.emit('stopLoop');
-            socket.emit('getTradeups',controls);
+                {
+                    //do nothing
+                }
+            else
+            {
+                setTradeups([]);
+                socket.emit('getTradeups');
+            }
         });
         setIsLoading(true);
     }
