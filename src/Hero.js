@@ -4,7 +4,7 @@ import TradeupComponent from './TradeupComponent';
 import './Hero.css'
 import io from 'socket.io-client';
 
-const socket=io('localhost:5000'||'https://csgotradeupbackend.herokuapp.com/');
+const socket=io('https://csgotradeupbackend.herokuapp.com/');
 console.log('wot');
 
 const Hero=()=>{
